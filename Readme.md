@@ -7,6 +7,14 @@
 - Kubectl
 - Minikube
 
+### Start docker and minikube
+
+### Start Docker Daemon
+
+```bash
+minikube start
+```
+
 ### CD into resources folder
 
 ```bash

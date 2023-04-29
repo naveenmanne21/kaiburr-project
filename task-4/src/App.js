@@ -16,7 +16,7 @@ function App() {
 
   function fetchData() {
 
-    fetch(`${address}servers`)
+    fetch(`${address.endsWith('/') ? address : address + '/'}servers`)
       .then(response => response.json())
       .then(data => setCards(data))
       .catch(error => console.log(error));
