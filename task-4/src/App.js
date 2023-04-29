@@ -35,7 +35,7 @@ function App() {
       },
       body: JSON.stringify(newNote)
     }
-    fetch(`${address}servers`, requestOptions).then(response => response.json()).then(data => console.log(data))
+    fetch(`${address.endsWith('/') ? address : address + '/'}servers`, requestOptions).then(response => response.json()).then(data => console.log(data))
       .catch(error => console.log(error));
 
   }
@@ -43,7 +43,7 @@ function App() {
 
   function onDelete(id) {
 
-    fetch(`${address}servers/${id}`, { method: 'DELETE' }).then(() => console.log("delete successful"))
+    fetch(`${address.endsWith('/') ? address : address + '/'}servers/${id}`, { method: 'DELETE' }).then(() => console.log("delete successful"))
 
   }
 
